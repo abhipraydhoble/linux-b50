@@ -1,3 +1,72 @@
+## $${\color {red} \textbf {Software Development Life Cycle (SDLC)}}$$
+
+**SDLC** is a structured process used for developing high-quality software. It ensures that the development process is systematic and efficient while meeting user expectations.
+
+##  Stages of SDLC
+
+1. **Planning**
+   - Identify the project goals and define the scope.
+   - Perform feasibility studies and allocate resources.
+
+2. **Requirement Analysis**
+   - Gather detailed requirements from stakeholders.
+   - Document functional and non-functional needs.
+
+3. **Design**
+   - Create blueprints for the system architecture.
+   - Define database design, user interfaces, and workflows.
+
+4. **Development**
+   - Write code to implement the planned functionalities.
+   - Use programming languages, frameworks, and tools.
+
+5. **Testing**
+   - Conduct tests to identify and fix bugs.
+   - Ensure the software meets quality standards and requirements.
+
+6. **Deployment**
+   - Deliver the software to the end-users.
+   - Set up the system in the production environment.
+
+7. **Maintenance**
+   - Provide updates to enhance features or fix issues.
+   - Monitor performance and ensure system stability.
+
+
+# On-Premises Virtualization vs Cloud Computing
+
+### **On-Premises**
+- Uses virtual machines on your own physical servers.
+- You own and manage all the hardware and software.
+- Higher upfront costs for buying and maintaining equipment (**CAPEX**).
+- Ongoing operational costs for power, cooling, and IT staff (**OPEX**).
+- Example: VMware, Microsoft Hyper-V.
+
+### **Cloud Computing**
+- Uses servers, storage, and other resources over the internet.
+- Managed by a cloud service provider (e.g., AWS, Azure, GCP).
+- No upfront costs; you pay only for what you use (**OPEX model**).
+- Reduces the need for maintaining infrastructure, saving time and money.
+- Example: AWS EC2, Google Cloud.
+
+### **How Cloud Solves On-Premises Problems**
+- **No CAPEX:** No need to purchase expensive servers and storage.
+- **Lower OPEX:** Reduces operational costs since the cloud provider handles maintenance, power, and cooling.
+- **Scalability:** Quickly scale resources up or down without buying new hardware.
+- **Flexibility:** Pay-as-you-go model fits varying business needs.
+- **Accessibility:** Access resources from anywhere with an internet connection.
+
+### **Comparison**
+| Feature             | On-Premises                  | Cloud Computing             |
+|---------------------|------------------------------|-----------------------------|
+| **Ownership**       | Fully owned by you          | Managed by provider         |
+| **Cost**            | High upfront (CAPEX) + OPEX | Pay-as-you-go (OPEX)        |
+| **Scalability**     | Limited to hardware         | Easily scalable             |
+| **Maintenance**     | You handle it               | Provider handles it         |
+| **Access**          | Local                       | Accessible from anywhere    |
+
+
+
 ## $${\color {red} \textbf {Operating System}}$$
 ### operating system is a system software which manages computer resources and acts as an intermediary between a user and the hardware
 
@@ -123,6 +192,10 @@ ls
 ````
 cd dirname
 ````
+- move to previous directory
+```bash
+cd ..
+```
 - check current directory
 ````
 pwd
