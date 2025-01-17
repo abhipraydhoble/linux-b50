@@ -34,7 +34,7 @@
    - Monitor performance and ensure system stability.
 
 
-# On-Premises Virtualization vs Cloud Computing
+## $${\color {red} \textbf {On Premise vs Cloud Computing}}$$
 
 ### **On-Premises**
 - Uses virtual machines on your own physical servers.
