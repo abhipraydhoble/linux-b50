@@ -157,6 +157,11 @@
     
 ## $${\color {red} \textbf {Basic Linux Commands}}$$
 
+
+- switch to root user
+```
+sudo -i
+````
 - check current shell
 ````
 echo $SHELL
