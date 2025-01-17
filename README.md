@@ -1,5 +1,5 @@
 ## $${\color {red} \textbf {Operating System}}$$
-- operating system is a system software which manages computer resources and acts as an intermediary between a user and the hardware
+### operating system is a system software which manages computer resources and acts as an intermediary between a user and the hardware
 
 ## $${\color {red} \textbf {Linux vs Windows}}$$
 ![image](https://github.com/user-attachments/assets/95f501d7-a477-4a71-bc14-90294f6184a7)
