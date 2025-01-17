@@ -1,6 +1,7 @@
 ## $${\color {red} \textbf {Software Development Life Cycle (SDLC)}}$$
 
-**SDLC** is a structured process used for developing high-quality software. It ensures that the development process is systematic and efficient while meeting user expectations.
+- **SDLC** is a structured process followed by software developers to design, develop, test, deploy, and maintain software applications.
+- It includes several phases, starting from the initial concept of the project and ending with the final deployment and ongoing maintenance of the software
 
 ##  Stages of SDLC
 
