@@ -85,3 +85,25 @@ mv <old_filename> <new_filename>
 # Example
 mv old_file.txt new_file.txt
 ````
+
+Practical Example: Moving Files to linuxb-50 Directory
+
+
+**Copy blue.html to the blue directory:**
+
+````
+cp blue.html blue
+````
+
+**Copy green.html to the green directory:**
+
+````
+cp green.html green
+````
+
+**Move the files blue.html and green.html to the linuxb-50 directory:**
+
+````
+mv blue.html /linuxb-50/
+mv green.html /linuxb-50/
+````
