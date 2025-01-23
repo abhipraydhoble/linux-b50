@@ -54,18 +54,7 @@ cat /etc/passwd
 
 ![image](https://github.com/user-attachments/assets/8573faaf-b158-4699-9abd-48b9ae43c2d8)
 
-**/etc/shadow**
-1. Username
-2. Encrypted Password
-3. Last time password change
-4. Min days between password change
-5. Max days between password change
-6. Warning days
-7. Inactive days
-8. Account Expiry
-9. Future Use
-- Stores encrypted password hashes and metadata for password policies.
-![image](https://github.com/user-attachments/assets/01a728d8-78f9-4489-91a0-cb3c9c57da3a)
+
 
 #### Modify an Existing User
 
