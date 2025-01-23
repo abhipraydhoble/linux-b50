@@ -32,11 +32,15 @@ sudo <command>
   
 #### Add a new user
 ````
-sudo useradd <username>
+adduser steve
+````
+or 
+````
+useradd -m <username>
 ````
 #### Set or change a user password
 ````
-sudo passwd <username>
+passwd <username>
 ````
 
 #### List All Users
