@@ -62,6 +62,8 @@ cat /etc/passwd
 ````
 usermod -u 3000 tony
 ````
+
+**Change user login shell**
 ````
 usermod -s /sbin/nologin steve
 ````
