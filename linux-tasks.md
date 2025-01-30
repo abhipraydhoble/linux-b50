@@ -22,5 +22,5 @@
 
 -  As the harry user, create a **sample.txt** document within the documents 
      directory.
--  Verify that the **luna** user can modify the document 
-     Confirm that the **hermione** user cannot access the document.
+-  Verify that the **luna** user can modify the file 
+     Confirm that the **hermione** user cannot modify the file.
