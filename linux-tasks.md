@@ -4,7 +4,7 @@
 2. Create three users: harry, hermione, and ron. Assign them to the 
     hogwarts group.
 
-3.Create a directory named documents in the root (/) directory.
+3. Create a directory named documents in the root (/) directory.
 4. Assign ownership of the documents directory to the harry user and the    
     hogwarts group.
 
