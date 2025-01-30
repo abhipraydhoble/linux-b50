@@ -15,12 +15,12 @@
 
 -  Configure a umask value that ensures new files created within the 
    documents directory have permissions **rw-r-----**
-
+   
+-  As the harry user, create a **sample.txt** document within the documents 
+     directory.
 -  Set an ACL on the documents directory to grant **luna** user the ability to  
     modify (write) files within the directory, even though they are not the 
     owner.
 
--  As the harry user, create a **sample.txt** document within the documents 
-     directory.
 -  Verify that the **luna** user can modify the file 
      Confirm that the **hermione** user cannot modify the file.
