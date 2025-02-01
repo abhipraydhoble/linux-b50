@@ -1,5 +1,6 @@
 # Types of Users in Linux
 
+
 ## 1. $${\color{red} \textbf {Root User}}$$
 
 - The root user is the superuser in Linux with unrestricted access to the entire system.
@@ -32,15 +33,11 @@ sudo <command>
   
 #### Add a new user
 ````
-adduser steve
-````
-or 
-````
-useradd -m <username>
+sudo useradd <username>
 ````
 #### Set or change a user password
 ````
-passwd <username>
+sudo passwd <username>
 ````
 
 #### List All Users
@@ -54,7 +51,18 @@ cat /etc/passwd
 
 ![image](https://github.com/user-attachments/assets/8573faaf-b158-4699-9abd-48b9ae43c2d8)
 
-
+**/etc/shadow**
+1. Username
+2. Encrypted Password
+3. Last time password change
+4. Min days between password change
+5. Max days between password change
+6. Warning days
+7. Inactive days
+8. Account Expiry
+9. Future Use
+- Stores encrypted password hashes and metadata for password policies.
+![image](https://github.com/user-attachments/assets/01a728d8-78f9-4489-91a0-cb3c9c57da3a)
 
 #### Modify an Existing User
 
@@ -62,8 +70,7 @@ cat /etc/passwd
 ````
 usermod -u 3000 tony
 ````
-
-**Change user login shell**
+**Assign a No-Login Shell** (Prevents the user from logging in)
 ````
 usermod -s /sbin/nologin steve
 ````
@@ -80,3 +87,56 @@ usermod -L natasha
 usermod -U natasha
 ````
 
+## $${\color{magenta} \textbf {Group Management}}$$
+
+**Create a Group**
+````
+groupadd avengers
+````
+
+**Important Files for Groups**
+
+![image](https://github.com/user-attachments/assets/ecd01e92-9511-4aa8-b514-7db87da1000b)
+
+![image](https://github.com/user-attachments/assets/350fdc3b-89e7-4f6c-9a6f-462a58681d96)
+
+![image](https://github.com/user-attachments/assets/d285f4fb-8013-494b-b553-79ec1fb7a27c)
+
+**Add a User to a Group**
+````
+usermod -aG groupname username
+example:
+usermod -aG avengers natasha
+````
+````
+gpasswd -a username groupname
+example:
+gpasswd -a steve avengers
+````
+**Remove a User from a Group**
+````
+gpasswd -d steve avengers
+````
+
+**Add Multiple Users to a Group**
+````
+gpasswd -M steve,thor,bruce avengers
+````
+**Remove a User from a Group**
+````
+gpasswd -d bruce avengers
+````
+
+**Assign an Admin to a Group**
+````
+gpasswd -A steve avengers
+````
+**Remove Admin from a Group**
+````
+gpasswd -A '' avengers
+````
+
+**Delete a Group**
+````
+groupdel -f avengers
+````
