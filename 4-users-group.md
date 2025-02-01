@@ -64,6 +64,29 @@ cat /etc/passwd
 - Stores encrypted password hashes and metadata for password policies.
 ![image](https://github.com/user-attachments/assets/01a728d8-78f9-4489-91a0-cb3c9c57da3a)
 
+**/etc/shadow**
+---
+**jarvis:encrypted_password:last_change:min_days:max_days:warn:inactive:expire:reserved**
+---
+
+- username – User's login name (jarvis).
+
+- encrypted_password – Hashed password or special values (!, *, empty for locked accounts).
+
+- last_change – Days since 1970-01-01 when the password was last changed.
+
+- min_days – Minimum days before a password change is allowed.
+
+- max_days – Maximum days before password must be changed.
+
+- warn – Days before expiration to warn the user.
+
+- inactive – Days after expiration before account is disabled.
+
+- expire – Days since 1970-01-01 after which the account is disabled.
+
+- reserved – Reserved for future use.
+
 #### Modify an Existing User
 
 **Assign a Customized UID to a User**
@@ -98,8 +121,30 @@ groupadd avengers
 
 ![image](https://github.com/user-attachments/assets/ecd01e92-9511-4aa8-b514-7db87da1000b)
 
-![image](https://github.com/user-attachments/assets/350fdc3b-89e7-4f6c-9a6f-462a58681d96)
+**/etc/group**
 
+
+**avengers:password:GID:user_list**
+
+- group_name – Name of the group (avengers).
+
+- password – Typically x, as group passwords are stored in /etc/gshadow.
+
+- GID (Group ID) – Unique identifier for the group.
+
+- user_list – Comma-separated list of users belonging to the group.
+![image](https://github.com/user-attachments/assets/350fdc3b-89e7-4f6c-9a6f-462a58681d96)
+**/etc/gshadow**
+
+**avengers:encrypted_password:admin_list:user_list**
+
+- group_name – Name of the group (avengers).
+
+- encrypted_password – Hashed group password (or ! for no password).
+
+- admin_list – Comma-separated list of group administrators.
+
+- user_list – Comma-separated list of group members.
 ![image](https://github.com/user-attachments/assets/d285f4fb-8013-494b-b553-79ec1fb7a27c)
 
 **Add a User to a Group**
@@ -140,3 +185,4 @@ gpasswd -A '' avengers
 ````
 groupdel -f avengers
 ````
+
