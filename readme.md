@@ -81,8 +81,7 @@
 - **Priority and Resource Control**:  
   - **`nice` and `renice`**: Adjust process priority.
   - **`kill`**: Stop processes when needed.
-- **Viewing Process Tree**:  
-  - **`pstree`**: Display processes in a tree structure.
+
 
 ---
 
@@ -93,8 +92,7 @@
 - **Testing Connectivity**:  
   - **`ping`**: Test network connectivity.
   - **`traceroute`**: Trace the route of network packets.
-- **Static IP Configuration**:  
-  - Configure static IP addresses using `nmtui` or `nmcli`.
+
 
 ---
 
