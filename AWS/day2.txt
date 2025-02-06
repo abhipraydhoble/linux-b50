@@ -1,0 +1,49 @@
+Steps to launch windows instance:
+
+# Login into your aws account
+# search for ec2 service
+# click onn instances -> launch instance
+# Give Name: Windows-Server
+# Select AMI: Windows
+# Select keyPair or Create New
+# Make sure in network setting RDP(3389) is allow 
+# click on launch instance
+
+
+# Connect to windows server:
+# select instance 
+# click on Connect
+# click on RDP Client
+# Download Remote Desktop File
+# Click on Get Password
+# Upload your key to decrpt Password
+# Now copy your Password
+# go to Download section where you downloaded Remote Desktop File
+# default username will be Administrator
+# paste decrypted Password
+
+# Now you can access your windows virtual machine
+
+----
+Crontab Setup on Ubuntu Server:
+
+* sudo apt update 
+* sudo apt install cron -y
+* sudo systemctl start cron
+* sudo systemctl enable cron
+* crontab -e    # crete new cronjob
+* crontab -l    # list scheduled jobs
+
+ex:   50 7 6 feb *   touch /home/ubuntu/index.html
+
+----
+Crontab Setup on Amazon Linux:
+
+* sudo yum update -y
+* sudo yum install cronie -y
+* sudo systemctl start crond
+* sudo systemctl enable crond
+* crontab -e    # crete new cronjob
+* crontab -l    # list scheduled jobs
+
+ex:   9 8 6 feb *   touch /home/ec2-user/demo.txt
