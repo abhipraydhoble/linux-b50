@@ -136,3 +136,93 @@ d) delete 1234
 
 **Answer:** a) kill 1234
 
+Question 1: You need to find all files in the /home/user1 directory that are larger than 10MB. Which command is the most efficient way to do this?
+
+a) ls -l /home/user1 | grep "10485760"
+b) find /home/user1 -size +10M
+c) for i in /home/user1/*; do du -h $i | grep M; done
+d) locate /home/user1 | du -h | grep M
+
+Answer: b) find /home/user1 -size +10M
+
+Question 2: A user reports that their application is running very slowly. You suspect a memory leak. Which command would you use to identify the process consuming the most memory?
+
+a) ps aux | sort -nrk 4,4
+b) top
+c) free -m
+d) df -h
+
+Answer: b) top
+
+Question 3: You need to schedule a script to run every day at 3:00 AM. Which method is the most appropriate?
+
+a) Edit the /etc/rc.local file.
+b) Create a systemd service.
+c) Use the at command.
+d) Use crontab -e.
+
+Answer: d) crontab -e
+
+Question 4: Your server's root partition is running out of space. You need to quickly identify the largest directories under /. Which command will help you accomplish this?
+
+a) du -sh / | sort -hr
+b) df -h /
+c) ls -l / | sort -nk 5,5
+d) find / -type d
+
+Answer: a) du -sh / | sort -hr
+
+Question 5: You want to grant a user 'john' the ability to execute the reboot command without needing to provide a password. What is the best approach?
+
+a) Add john to the sudoers file using visudo and granting permission to run /sbin/reboot.
+b) Change the permissions of /sbin/reboot to 777.
+c) Create an alias for reboot that doesn't require a password.
+d) Directly edit /etc/passwd to remove the password requirement for john.
+
+Answer: a) Add john to the sudoers file using visudo and granting permission to run /sbin/reboot.
+
+Question 6: You need to change the ownership of all files and directories in /var/www/html to the user webmaster and the group www-data. Which command should you use?
+
+a) chown -R webmaster:www-data /var/www/html
+b) chmod -R webmaster:www-data /var/www/html
+c) useradd webmaster:www-data /var/www/html
+d) groupadd webmaster:www-data /var/www/html
+
+Answer: a) chown -R webmaster:www-data /var/www/html
+
+Question 7: A service is failing to start. You want to examine the service's logs to understand the reason for the failure. The service name is "my_app". Where would you typically look for the logs?
+
+a) /var/log/my_app.log or using journalctl -u my_app
+b) /etc/my_app/logs
+c) /root/my_app/logs
+d) /opt/my_app/logs
+
+Answer: a) /var/log/my_app.log or using journalctl -u my_app
+
+Question 8: You need to create a new user account named 'developer' with the user ID 1005 and add them to the group 'developers'. Which command would you use?
+
+a) useradd -u 1005 -g developers developer
+b) adduser -u 1005 -g developers developer
+c) newuser -u 1005 -g developers developer
+d) createuser -u 1005 -g developers developer
+
+Answer: a) useradd -u 1005 -g developers developer
+
+Question 9: You want to create a symbolic link named latest pointing to the file version-1.2.3.txt in the current directory. Which command achieves this?
+
+a) cp version-1.2.3.txt latest
+b) mv version-1.2.3.txt latest
+c) ln -s version-1.2.3.txt latest
+d) touch latest version-1.2.3.txt
+
+Answer: c) ln -s version-1.2.3.txt latest
+
+Question 10: You've accidentally deleted an important file. You have backups enabled. What's the first step to restore the file?
+
+a) Immediately shut down the server to prevent further data loss.
+b) Locate the backup medium and use the appropriate tool (e.g., tar, rsync) to restore the file.
+c) Run fsck on the filesystem.
+d) Reinstall the operating system.
+
+Answer: b) Locate the backup medium and use the appropriate tool (e.g., tar, rsync) to restore the file.
+
