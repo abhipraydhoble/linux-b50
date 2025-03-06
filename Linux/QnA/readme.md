@@ -1,69 +1,78 @@
 
-### Linux 
+## Questions and Answers
 
-1. **A DevOps Engineer is troubleshooting a web application deployment. The deployment script fails with a "permission denied" error when trying to write to `/var/www/html`. What is the most appropriate immediate solution?**
-   - **Answer:** `chown -R apache:apache /var/www/html` (Assuming Apache is the webserver user)
+### 1. A DevOps Engineer is troubleshooting a web application deployment. The deployment script fails with a "permission denied" error when trying to write to /var/www/html. As a Linux administrator, what would you suggest as the most appropriate immediate solution?
 
-2. **A System Administrator is investigating high CPU usage on a Linux server. Which command is the best starting point to identify the process consuming the most CPU?**
-   - **Answer:** `top`
+a) chmod 777 /var/www/html  
+b) chown -R apache:apache /var/www/html (Assuming Apache is the webserver user)  
+c) sudo su - and then run the deployment  
+d) Reboot the server.  
 
-3. **A Linux Administrator needs to find all files in a directory and its subdirectories that are larger than 10MB. Which command would they use?**
-   - **Answer:** `find . -size +10M`
+**Answer:** b) chown -R apache:apache /var/www/html (Assuming Apache is the webserver user)
 
-4. **A DevOps Engineer is writing a shell script to automate the deployment of an application. They need to check if a specific file exists before proceeding. Which conditional statement is most appropriate?**
-   - **Answer:** `if [ -f "$file" ]`
+### 2. As an AWS Cloud Engineer, you're tasked with creating a script to automate the backup of a MySQL database running on an EC2 instance. What command is most suitable for creating a compressed database backup?
 
-5. **A Linux Administrator needs to find the processes that are listening on a specific port. What command is most appropriate?**
-   - **Answer:** `netstat -tulnp | grep <port_number>`
+a) cp -r /var/lib/mysql /backup  
+b) mysqldump -u root -p[password] [database_name] | gzip > /backup/db_backup.sql.gz  
+c) tar -czvf /backup/db_backup.tar.gz /var/lib/mysql  
+d) rsync -avz /var/lib/mysql /backup  
 
-6. **A DevOps Engineer wants to schedule a script to run every day at 3:00 AM. Which tool would they typically use?**
-   - **Answer:** `cron`
+**Answer:** b) mysqldump -u root -p[password] [database_name] | gzip > /backup/db_backup.sql.gz
 
-7. **As a Linux Administrator, you need to list all files and directories, including hidden ones, in the current directory. Which command will achieve this?**
-   - **Answer:** `ls -a`
+### 3. A System Administrator is investigating high CPU usage on a Linux server. Which command is the best starting point to identify the process consuming the most CPU?
 
-8. **A Linux Administrator wants to count the number of lines in a file. Which command should they use?**
-   - **Answer:** `wc -l`
+a) netstat -anp  
+b) df -h  
+c) top  
+d) ping google.com  
 
-9. **A DevOps Engineer needs to ensure that all commands executed by a specific user are logged for auditing purposes. Which configuration would be most appropriate?**
-   - **Answer:** Enable process accounting using `acct` or `auditd`
+**Answer:** c) top
 
-### AWS & Cloud Engineering
+### 4. A DevOps Engineer is writing a shell script to automate the deployment of an application. They need to check if a specific file exists before proceeding. Which conditional statement is most appropriate?
 
-10. **As an AWS Cloud Engineer, you're tasked with creating a script to automate the backup of a MySQL database running on an EC2 instance. What command is most suitable for creating a compressed database backup?**
-    - **Answer:** `mysqldump -u root -p[password] [database_name] | gzip > /backup/db_backup.sql.gz`
+a) if [ $file -exists ]  
+b) if [ -f "$file" ]  
+c) if ( test -e "$file" )  
+d) if [[ -e $file ]]  
 
-11. **An AWS Solutions Architect needs to configure a web server to automatically start after a system reboot. Which of the following is the best way to ensure this happens on a modern Linux system using systemd?**
-    - **Answer:** `systemctl enable <service_name>`
+**Answer:** b) if [ -f "$file" ]
 
-12. **An AWS Engineer needs to check the network configuration of an EC2 instance to ensure it's properly connected to the VPC. Which command would be most helpful for displaying network interfaces and their configurations?**
-    - **Answer:** `ifconfig` (or `ip addr` on newer systems)
+### 5. As an AWS Certified SysOps Administrator, you want to manage user permissions more efficiently in Linux. Which of the following is the recommended way to manage users with common access needs?
 
-13. **An AWS DevOps engineer wants to manage and store secrets like API keys and passwords. Which command will help achieve this?**
-    - **Answer:** Use an AWS service like `AWS Secrets Manager`
+a) Assign individual permissions using chmod for each user.  
+b) Create groups and add users to those groups, then manage permissions based on the group.  
+c) Use Access Control Lists (ACLs) exclusively.  
+d) Create a separate user account for each task.  
 
-14. **An AWS Engineer wants to mount an EBS volume to an EC2 instance. What is the first step they should take after attaching the volume to the instance?**
-    - **Answer:** Format the EBS volume.
+**Answer:** b) Create groups and add users to those groups, then manage permissions based on the group.
 
-15. **An AWS Solutions Architect is configuring a Load Balancer and needs to ensure that traffic is only allowed from the Load Balancer to the EC2 instances. What security measure should be implemented?**
-    - **Answer:** Use Security Groups to restrict inbound traffic to the EC2 instances to only the Load Balancer's Security Group.
+### 6. A Linux Administrator needs to find all files in a directory and its subdirectories that are larger than 10MB. Which command would they use?
 
-### Networking & Security
+a) find . -size +10M  
+b) ls -lR | grep "10M"  
+c) du -sh * | grep "10M"  
+d) grep -r "10M" .  
 
-16. **As an AWS DevOps Engineer, you're troubleshooting why your application cannot access a specific port on a remote server. What Linux utility would you use to verify if that port is listening on the remote server?**
-    - **Answer:** `netstat` or `ss`
+**Answer:** a) find . -size +10M
 
-17. **A System Administrator wants to redirect all standard output and standard error of a command to a file named `output.log`. Which command accomplishes this?**
-    - **Answer:** `command &> output.log`
+### 7. A DevOps Engineer is tasked with automating the process of creating a new user account on a fleet of Linux servers. Which command is the standard utility for adding a new user?
 
-18. **An AWS Cloud Support Engineer notices high network latency between two EC2 instances. Which command is most helpful for identifying the network path and potential bottlenecks?**
-    - **Answer:** `traceroute` (or `tracepath`)
+a) adduser  
+b) newuser  
+c) usercreate  
+d) mkuser  
 
-19. **As a Linux Admin, you want to see the last commands executed in the current shell session. Which command can you use?**
-    - **Answer:** `history`
+**Answer:** a) adduser
 
-20. **A DevOps Engineer wants to find all occurrences of the word "ERROR" in all files within a directory. Which command should you use?**
-    - **Answer:** `grep -r "ERROR" .`
+### 8. An AWS Engineer needs to check the network configuration of an EC2 instance to ensure it's properly connected to the VPC. Which command would be most helpful for displaying network interfaces and their configurations?
+
+a) netstat -rn  
+b) ifconfig (or ip addr on newer systems)  
+c) ps -ef  
+d) free -m  
+
+**Answer:** b) ifconfig (or ip addr on newer systems)
 
 ---
+
 
